@@ -44,3 +44,20 @@ MusePal is a modern music app that lets you search a song and returns the lyrics
 <a href=""><img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/>
 </p>
 
+### Website
+
+https://mavila6.github.io/muse-pal/
+
+### Screenshots
+
+![alt text](assets/images/muse-shot-1.png)
+
+![alt text](assets/images/muse-shot-2.png)
+
+![alt text](assets/images/muse-shot-3.png)
+
+## Contribution
+
+David Lopez - Samantha Malone - Marco Avila
+
+&copy 2021 Quatro
