@@ -2,6 +2,8 @@
     --dark-bg: #0D1117;
     --accent: #161B22;
     --green: #BCECC3;
+    --blue: #94ABF3;
+    --pink: #FFA1A1;
 }
 
 *{
@@ -21,6 +23,7 @@ body {
 
 .container {
     background-image: url(../images/musepal-bg.svg);
+    background-size: cover;
     padding: 20px;
     border-radius: 15px;
     width: 100vw;
@@ -33,11 +36,23 @@ body {
     justify-content: center;
     text-align: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 30px;
 }
 
-h3 {
-    font-size: 1.2rem;
+.subtitle {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.muse {
+    color: var(--green);
+}
+
+.h3 {
+    font-size: ;
+    line-height: 30px;
 }
 
 .option-container {
@@ -60,4 +75,17 @@ h3 {
     outline: none;
     border: none;
     margin: 20px;
+    transition: .3s;
+    color: white;
+    background-color: var(--blue);
+}
+
+.btn:hover {
+    background-color: var(--pink);
+    transition: .3s;
+}
+
+.btn:active {
+    background-color: var(--blue);
+    transition: 0s;
 }
