@@ -28,14 +28,21 @@
         </div>
         <!-- Div containing the buttons that the user can interact with to open the modals -->
         <div id="optionContainer" class="option-container">
-            <h3 id="">Pick your poison</h3>
-            <button id="discoverBtn" class="btn">discover something new</button>
-            <button id="searchBtn" class="btn">Search a Song</button>
-            <button id="randomBtn" class="btn">Random</button>
+            <h3 id="">Find Lyrics</h3>
+            <form class="searchForm">
+            <input placeholder="Song Title" class="searchInputTitle">
+            <input placeholder="Artist" class="searchInputArtist">
+            <button id="searchBtn" class="btn" type="submit">Search</button>
+        </form>
+        </div>
+        <div class="lyrics-div">
+
         </div>
     <!-- Closing tag for main section of page -->
     </main>
     <!-- Script tag to link the JS file at end of body element -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 <!-- Closing HTML -->
