@@ -1,0 +1,93 @@
+/* CSS (root) psuedo class containing the repeating color theme to be called in stylesheet */
+:root {
+    --dark-bg: #0D1117;
+    --accent: #161B22;
+    --green: #BCECC3;
+    --blue: #94ABF3;
+    --pink: #FFA1A1;
+}
+/* Universal selector setting font family as well as margin and padding for spacing */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+/* Assigns background color to body element as well as flex functionality, sizing, and centering content */
+body {
+    background-color: var(--dark-bg);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Adjusts the spacing of content in h3 element and determines font size */
+h3 {
+    font-size: 20px;
+    line-height: 30px;
+}
+/* Adds background image to section with 'container' class as well as spacing and size properties */
+.container {
+    background-image: url(../images/musepal-bg.svg);
+    background-size: cover;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100vw;
+    height: 100vw;
+    max-width: 80%;
+}
+/* Centers content in section with 'logo' class and assigns font size/color */
+.logo {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
+/* Centers content in section with 'subtitle' class and assigns white font color */
+.subtitle {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+/* Changes font color to span element with 'muse' class */
+.muse {
+    color: var(--green);
+}
+/* Centers content in the section with 'option-container' class and adds font color, background color, spacing and rounded edges */
+.option-container {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 15px;
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 30px;
+}
+/* Assigns initial styles for the buttons in the option container including bg color, font properties, rounded edges and spacing */
+.btn {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 100px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    margin: 20px;
+    transition: .3s;
+    color: white;
+    background-color: var(--blue);
+}
+/* Psuedo class assigns different background color for button when cursor hovers over */
+.btn:hover {
+    background-color: var(--pink);
+    transition: .3s;
+}
+/* Psuedo class assigns different background color for button while clicked */
+.btn:active {
+    background-color: var(--green);
+    transition: 0s;
+}
