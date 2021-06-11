@@ -11,6 +11,9 @@ lyrics()
         
         let sectionEl = $('.lyrics-container');
         let divEl = $('<div>').addClass('.lyrics');
-    
+        
+        divEl.append(section);
+        sectionEl.append(divEl);
+        console.log(section);
     };
     
