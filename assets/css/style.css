@@ -4,6 +4,10 @@
     --green: #BCECC3;
     --blue: #94ABF3;
     --pink: #FFA1A1;
+    --yelow: #FCCC75;
+
+    --primary-font: #fff;
+    --secondary-font: #BEBEBE;
 }
 
 *{
@@ -35,7 +39,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--primary-font);
     font-size: 30px;
 }
 
@@ -43,22 +47,22 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--primary-font);
 }
 
 .muse {
     color: var(--green);
 }
 
-.h3 {
-    font-size: ;
-    line-height: 30px;
+h3 {
+    color: var(--primary-font);
+    font-size: 25px;
 }
 
 .option-container {
     background-color: rgba(255, 255, 255, .5);
     border-radius: 15px;
-    color: white;
+    color: var(--primary-font);
     display: grid;
     justify-content: center;
     align-items: center;
@@ -67,16 +71,28 @@ body {
     margin: 30px;
 }
 
+#slogan {
+    margin: 20px 0px;
+}
+
+.line {
+    border-bottom: 10px solid var(--green);
+    width: 20%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .btn {
     font-size: 16px;
     font-weight: bold;
     padding: 10px 100px;
-    border-radius: 15px;
+    border-radius: 25px;
     outline: none;
     border: none;
     margin: 20px;
     transition: .3s;
-    color: white;
+    color: var(--primary-font);
     background-color: var(--blue);
 }
 
@@ -88,4 +104,324 @@ body {
 .btn:active {
     background-color: var(--blue);
     transition: 0s;
+}
+
+.overlay {
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 11;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-width: 2560px) {
+    *{
+        font-family: Poppins, sans-serif;
+    }
+    
+    body {
+        /* background-image: url(../images/musepal-bg-desktop.svg); */
+        /* background-size: cover; */
+        background-color: var(--dark-bg);
+        display: inline;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 58px;
+    }
+
+    /* meatball menu style ------------------------------------- */
+    .meatball-container {
+        position: absolute;
+        z-index: 11;
+        background-color: var(--accent);
+        border-radius: 15px;
+        padding: 10px;
+        left: 94vw;
+        top: 20px;
+        outline: none;
+        border: none;
+    }
+
+    .meatball-container:hover {
+        background-color: var(--blue);
+        transition: .5s;
+    }
+
+    .meatball-container:active {
+        background-color: var(--pink);
+        transition: 0s;
+    }
+
+    .meatball {
+        padding: 10px;
+        width: 100px;
+        height: 50px;
+    }
+
+    /* meatball modal style */
+    .meat-ball-modal {
+        position: absolute;
+        z-index: 12;
+        background-color: var(--accent);
+        border-radius: 15px;
+        padding: 30px;
+        height: 170px;
+        width: 300px;
+        left: 87vw;
+        top: 120px;
+        transition: .5s;
+    }
+
+    .dark-theme {
+        height: 50px;
+        width: 100%;
+        border-radius: 15px;
+        background-color: var(--blue);
+        border: none;
+        outline: none;
+        margin: 20px 0 20px 0;
+        transition: .5s;
+    }
+
+    .light-theme {
+        height: 50px;
+        width: 100%;
+        border-radius: 15px;
+        background-color: var(--pink);
+        border: none;
+        outline: none;
+        margin: 20px 0 20px 0;
+        transition: .5s;
+    }
+    
+    .light-theme:hover, .dark-theme:hover {
+        background-color: var(--green);
+        transition: .5s;
+    }
+
+    .dark-theme:active {
+        background-color: var(--blue);
+        transition: 0s;
+    }
+
+    .light-theme:active {
+        background-color: var(--pink);
+        transition: 0s;
+    }
+
+    /* meatball menu style end ------------------------------------- */
+
+    .sidebar {
+        background-color: var(--accent);
+        height: 100vh;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding: 30px 20px 0px 20px;
+    }
+
+    .nav-btn {
+        border-radius: 50px;
+        background-color: var(--blue);
+        border: none;
+        outline: none;
+        color: var(--primary-font);
+        padding: 15px;
+        display: flex;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-weight: bold;
+        font-size: 22px;
+        transition: .3s;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-btn:nth-child(2) {
+        background-color: var(--green);
+    }
+
+    .nav-btn:nth-child(3) {
+        background-color: var(--pink);
+    }
+
+    .nav-btn:hover {
+        background-color: var(--pink);
+        transition: .3s;
+    }
+
+    .nav-line {
+        border-bottom: 2px solid var(--primary-font);
+        width: 100%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .nav-sub {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .nav-footer {
+        text-align: left;
+        position: relative;
+        margin-top: 700px;
+        font-size: 18px;
+    }
+
+    .main-container {
+        background-color: var(--dark-bg);
+        margin-left: 11.7%;
+        padding: 145px 0px 0px 50px;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .feature-content {
+        display: inline-flex;
+        margin-bottom: 200px;
+    }
+
+    .featured-content h3 {
+        color: var(--primary-font);
+        font-weight: bold;
+    }
+
+    .featured-content h5 {
+        margin-top: 10px;
+        color: var(--secondary-font);
+        font-weight: normal;
+    }
+
+    .div-line {
+        border-bottom: 2px solid var(--primary-font);
+        width: 87%;
+        margin: auto;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .feature-card {
+        margin: 0px 20px 0px 0px;
+        width: 400px;
+    }
+
+    .feature-card h3 {
+        color: var(--primary-font);
+        font-weight: bold;
+        justify-content: center;
+        text-align: center;
+        margin: 15px;
+    }
+
+    .song-card-img {
+        background-size: cover;
+        background-color: var(--accent);
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .feature-img {
+        border-radius: 15px 15px 0 0;
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .song-card-info {
+        background-color: var(--accent);
+        color: var(--primary-font);
+        padding: 5px 0px 10px 10px;
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    .search-song {
+        margin-top: 70px;
+    }
+
+    .search-song input {
+        border-radius: 50px;
+        margin-top: 20px;
+        padding: 15px;
+        font-size: 18px;
+        width: 30%;
+        outline: none;
+        border: none;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    ::-webkit-scrollbar {
+        background-color: var(--dark-bg);
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--accent);
+        border-radius: 15px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--green);
+    }
+
+    /* light mode style */
+    .lightmode-sidebar {
+        --dark-bg: #fff;
+        --accent: #fff;
+        --green: #BCECC3;
+        --blue: #FCCC75;
+        --pink: #FFA1A1;
+    
+        --primary-font: #0D1117;
+        --secondary-font: #4b4b4b;
+        
+        height: 100vh;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding: 30px 20px 0px 20px;
+    }
+
+    .lightmode {
+        --dark-bg: #e9e9e9;
+        --accent: #fff;
+        --green: #BCECC3;
+        --blue: #FCCC75;
+        --pink: #FFA1A1;
+    
+        --primary-font: #0D1117;
+        --secondary-font: #4b4b4b;
+    }
+    
+    .lightmode-logo {
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .lightimage {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-left: 35%;
+    }
+
+    .muselight {
+        color: var(--blue);
+    }
 }
