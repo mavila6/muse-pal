@@ -141,13 +141,10 @@ h3 {
 
     /* meatball menu style ------------------------------------- */
     .meatball-container {
-        position: absolute;
-        z-index: 11;
-        background-color: var(--accent);
-        border-radius: 15px;
-        padding: 10px;
-        left: 94vw;
-        top: 20px;
+        background-color: var(--yelow);
+        border-radius: 50px;
+        height: 50px;
+        width: 100%;
         outline: none;
         border: none;
     }
@@ -177,8 +174,8 @@ h3 {
         padding: 30px;
         height: 170px;
         width: 300px;
-        left: 87vw;
-        top: 120px;
+        left: 50%;
+        top: 50%;
         transition: .5s;
     }
 
@@ -346,7 +343,7 @@ h3 {
         margin-top: 20px;
         padding: 15px;
         font-size: 18px;
-        width: 30%;
+        width: 50%;
         outline: none;
         border: none;
     }
