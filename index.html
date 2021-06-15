@@ -12,11 +12,28 @@
 </head>
 <body>
 
+    <div class="mobile-nav hide">
+        <div id="darkmodelogo" class="logo">
+            <img src="./assets/images/musepal-logo.svg" alt="">
+            <h1><span class="muse">muse</span>Pal</h1>
+        </div>
+        <div id="burger" class="burger">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+    </div>
+
         <!-- navbar -->
         <div id="sidebar" class="sidebar">
             <div id="darkmodelogo" class="logo">
-                <img src="./assets/images/musepal-logo.svg" alt="">
-                <h1><span class="muse">muse</span>Pal</h1>
+                <div id="desktoplogo" class="desktoplogo">
+                    <img src="./assets/images/musepal-logo.svg" alt="">
+                    <h1><span class="muse">muse</span>Pal</h1>
+                    <button id="mobileNavBtn1" class="nav-btn hide">Discover Song Lyrics</button>
+                    <button id="mobileNavBtn2" class="nav-btn hide">Random Songs</button>
+                    <button id="mobileNavBtn3" class="nav-btn hide">Search for Songs</button>
+                </div>
                 <div class="nav-btn-container">
                     <button class="nav-btn">Discover Song Lyrics</button>
                     <button class="nav-btn">Random Songs</button>
@@ -55,6 +72,7 @@
                     <button class="nav-btn">Random Songs</button>
                     <button class="nav-btn">Search for Songs</button>
                 </div>
+                
                 <div class="nav-line"></div>
                 <p class="nav-sub">Discover lyrics <br>anytime</p>
             </div>
@@ -108,5 +126,6 @@
                         </div>
                     </div>
         </section>
+        <script src="./assets/js/navbar.js"></script>
         <script src="./assets/js/lightmode.js"></script>
 </body>

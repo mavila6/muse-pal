@@ -21,6 +21,7 @@ function closeMeatballMenu(){
 window.addEventListener('click', function(e){
     if(!meatballMenu.contains(e.target)){
         closeMeatballMenu();
+        
     } 
 })
 
@@ -55,6 +56,10 @@ const disableLightMode = () => {
     sidebar.classList.remove('lightmode-sidebar')
     document.body.classList.remove('lightmode')
     localStorage.setItem('lightmode', null)
+}
+
+if(lightMode === 'enabled'){
+    enableLightMode();
 }
 
 lightModeButton.addEventListener('click', () => {

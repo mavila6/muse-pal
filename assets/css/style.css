@@ -245,14 +245,6 @@ h3 {
         text-align: center;
     }
 
-    .nav-btn:nth-child(2) {
-        background-color: var(--green);
-    }
-
-    .nav-btn:nth-child(3) {
-        background-color: var(--pink);
-    }
-
     .nav-btn:hover {
         background-color: var(--pink);
         transition: .3s;
@@ -378,13 +370,8 @@ h3 {
         --secondary-font: #4b4b4b;
         
         height: 100vh;
-        position: fixed;
         z-index: 10;
-        top: 0;
-        left: 0;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding: 30px 20px 0px 20px;
+        padding: 30px;
     }
 
     .lightmode {
@@ -415,3 +402,181 @@ h3 {
         color: var(--blue);
     }
 /* } */
+
+@media screen and (max-width: 1651px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .logo {
+        padding-top: 30px;
+    }
+
+    .sidebar {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translatex(100%);
+        transition: .5s ease-in;
+    }
+
+    .nav-btn-container {
+        opacity: 0;
+    }
+    
+    .bg {
+        justify-content: center;
+        align-items: center;
+        height: 960px;
+    }
+
+    .featured-content, .feature-content, .search-song {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .div-line {
+        width: 100%;
+    }
+
+    .mobile-nav {
+        background-color: var(--dark-bg);
+        width: 100%;
+    }
+
+    .burger {
+        background-color: var(--dark-bg);
+        padding: 30px;
+        cursor: pointer;
+        display: grid;
+        justify-content: center;
+    }
+    .burger-line{
+        background-color: white;
+        width: 30px;
+        height: 5px;
+        margin: 3px;
+    }
+}
+
+@media screen and (max-width: 1651px) {
+    .bg {
+        height: 100vh;
+    }
+
+    .sidebar {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1329px) {
+    .bg {
+        height: 100%;
+    }
+
+    .sidebar {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1221px) {
+    .bg {
+        height: 100%;
+    }
+
+    .sidebar {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 909px) {
+    .bg {
+        height: 100%;
+    }
+
+    .sidebar {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .logo {
+        padding-top: 30px;
+    }
+
+    .sidebar {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translatex(100%);
+        transition: .5s ease-in;
+        height: 100%;
+    }
+
+    .nav-btn-container {
+        opacity: 0;
+    }
+    
+    .bg {
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .featured-content, .feature-content, .search-song {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .div-line {
+        width: 100%;
+    }
+
+    .mobile-nav {
+        background-color: var(--dark-bg);
+        width: 100%;
+    }
+
+    .burger {
+        background-color: var(--dark-bg);
+        padding: 30px;
+        cursor: pointer;
+        display: grid;
+        justify-content: center;
+    }
+    .burger-line{
+        background-color: white;
+        width: 30px;
+        height: 5px;
+        margin: 3px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .bg {
+        height: 100%;
+    }
+
+    .sidebar {
+        height: 100%;
+    }
+}
+
+.sidebar-active {
+    transform: translatex(0%);
+    position: absolute;
+}
