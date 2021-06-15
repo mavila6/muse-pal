@@ -15,7 +15,7 @@ function searchLyrics(event) {
         // where to display data 
         // don't freak out...playing with bulma styling for display
         // call giphy function
-        // searchTerm.gifImg();
+        
 
         $(".lyrics-div").append(`
         <div class="card">
@@ -29,22 +29,38 @@ function searchLyrics(event) {
     });
   }
 // Create a function called `myFunction()`
+function waitingGif(event) {
+  var str = document.querySelector ("lyrics.div");
+  fetch
+}
+
 document.addEventListener("DOMContentLoaded", init);
 function init () {
-  document.getElementById("submit").addEventListener("click", ev => {
+  // error message here HELP!
+  document.getElementById("return").addEventListener("submit", ev => {
     // to stop page reload
     ev.preventDefault();
-    let str = document.getElementById("submit").nodeValue.trim();
+    var str = document.getElementById("submit").nodeValue.trim();
     url = url.concat(str);
     console.log(url);
     fetch(url)
       .then(response => response.json())
       .then(content => {
         // data, pagination, meta
-
-      })
-  })
-}
+        console.log(content.data);
+        console.log("META", content.meta);
+        var fig = document.createElement("figure");
+        var img = document.createElement("img");
+        var fc = document.createElement("figcaption");
+        img.src = content.data[0].images.downsized.url;
+        img.alt = content.data[0].title;
+        fc.textContent = content.data[0].title;
+        fig.appendChild(img);
+        fig.appendChild(fc);
+        var out = document.querySelector("out");
+      });
+  });
+};
 // example from class work
 // function myFunction() {
 //   // Create a variable called `searchTerm` that will use `document.querySelector()` to target the `id` of the input
