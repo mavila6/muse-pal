@@ -34,7 +34,15 @@ function init () {
   document.getElementById("submit").addEventListener("click", ev => {
     // to stop page reload
     ev.preventDefault();
-    
+    let str = document.getElementById("submit").nodeValue.trim();
+    url = url.concat(str);
+    console.log(url);
+    fetch(url)
+      .then(response => response.json())
+      .then(content => {
+        // data, pagination, meta
+
+      })
   })
 }
 // example from class work
