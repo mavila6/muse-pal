@@ -19,14 +19,12 @@ function searchLyrics(event) {
     .then(function (data) {
         // where to display data 
         // remove gif display
-        $(".lyrics-div").append(`
+        $(".content").append(`
         <div class="card">
-      <div class="content">
-      ${data.lyrics} <a>@bulmaio</a>.
-      <a href="#">#css</a> <a href="#">#responsive</a>
-    </div>
-  </div>
-</div>
+          <div class="content">
+          ${data.lyrics}Hello
+          </div>
+        </div>
         `)
     });
   };
