@@ -30,8 +30,8 @@ const lightModeButton = document.querySelector('#lightTheme')
 
 // variables to select html elements for color manipulation
     var sidebar = document.querySelector('#sidebar')
-    var lightlogo = document.querySelector('#lightmodelogo')
-    var darklogo = document.querySelector('#darkmodelogo')
+    var lightlogo = document.querySelector('#lightmodelogosvg')
+    var darklogo = document.querySelector('#darkmodelogosvg')
     var muse = document.querySelector('#muse')
     var meatballdark = document.querySelector('#meatball-btn-dark')
     var meatballlight = document.querySelector('#meatball-btn-light')
@@ -39,6 +39,7 @@ const lightModeButton = document.querySelector('#lightTheme')
 const enableLightMode = () => {
     meatballdark.classList.remove('hide')
     meatballlight.classList.add('hide')
+    lightlogo.classList.remove('hide')
     darklogo.classList.add('hide')
     sidebar.classList.add('lightmode-sidebar')
     document.body.classList.add('lightmode')
