@@ -1,13 +1,21 @@
+
+var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 var searchForm = $('.searchForm');
 var title = $('#title')
 var artist = $('.artist')
 var img = $('.gif-embed')
 var divEl = $('.content');
+var searchInputTitle = $('.searchInputTitle').val();
+var searchInputArtist = $('.searchInputArtist').val();
+
+gifMe();
+searchForm.on('submit', searchLyrics());
 
 function searchLyrics(event) {
     event.preventDefault();
-    const searchInputTitle = $('.searchInputTitle').val()
-    const searchInputArtist = $('.searchInputArtist').val();
+    var searchValue = searchInputTitle + " by: " + searchInputArtist
+    searchHistory.unshift(searchValue);
+    localStorage.setItem("search", JSON.stringify(searchHistory));
     fetch(`https://api.lyrics.ovh/v1/${searchInputArtist}/${searchInputTitle}`)
     .then(function (response) {
         return response.json();
@@ -38,7 +46,15 @@ function gifMe() {
         console.log('error!');
         console.error(error);
     }) 
-}; 
+  };  
+  
+function loopArray() {
+  // put buttons on page
+}
+// display storage history
+var searchHistoryArtist = searchHistory[0].split(" by: ") [1];
+var searchHistoryTitle = searchHistory[0].split(" by: ") [0];
 
-gifMe();
-searchForm.on('submit', searchLyrics());
+$(".searchInputTitle").val(searchHistoryTitle);
+$(".searchInputArtist").val(searchHistoryArtist);
+
