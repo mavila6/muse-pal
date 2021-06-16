@@ -30,23 +30,15 @@
                 <div id="desktoplogo" class="desktoplogo">
                     <img src="./assets/images/musepal-logo.svg" alt="">
                     <h1><span class="muse">muse</span>Pal</h1>
-                    <button id="mobileNavBtn1" class="nav-btn hide">Discover Song Lyrics</button>
-                    <button id="mobileNavBtn2" class="nav-btn hide">Random Songs</button>
-                    <button id="mobileNavBtn3" class="nav-btn hide">Search for Songs</button>
-                </div>
-                <div class="nav-btn-container">
-                    <button class="nav-btn">Discover Song Lyrics</button>
-                    <button class="nav-btn">Random Songs</button>
-                    <button class="nav-btn">Search for Songs</button>
+                    <button id="meatball-container" class="meatball-container">
+                        <img src="./assets/images/meatball-menu.svg" id="meatball-btn-light" class="meatball" alt="">
+                        <img src="./assets/images/meatball-menu-dark.svg" id="meatball-btn-dark" class="meatball hide" alt="">
+                    </button>
                 </div>
 
         <!-- meatball menu -->
         <div class="menu-container">
             <!-- meatball menu option -->
-            <button id="meatball-container" class="meatball-container">
-                <img src="./assets/images/meatball-menu.svg" id="meatball-btn-light" class="meatball" alt="">
-                <img src="./assets/images/meatball-menu-dark.svg" id="meatball-btn-dark" class="meatball hide" alt="">
-            </button>
 
             <!-- meatball modal -->
             <div id="meatball-modal" class="meat-ball-modal hide">
@@ -67,12 +59,10 @@
             <div id="lightmodelogo" class="hide">
                 <img class="lightimage" src="./assets/images/musepal-logo-dark.svg" alt="">
                 <h1><span id="muse" class="muse">muse</span>Pal</h1>
-                <div class="nav-btn-container">
-                    <button class="nav-btn">Discover Song Lyrics</button>
-                    <button class="nav-btn">Random Songs</button>
-                    <button class="nav-btn">Search for Songs</button>
-                </div>
-                
+                <button id="meatball-container-light" class="meatball-container">
+                    <img src="./assets/images/meatball-menu.svg" id="meatball-btn-light" class="meatball" alt="">
+                    <img src="./assets/images/meatball-menu-dark.svg" id="meatball-btn-dark" class="meatball hide" alt="">
+                </button>
                 <div class="nav-line"></div>
                 <p class="nav-sub">Discover lyrics <br>anytime</p>
             </div>
@@ -80,51 +70,41 @@
 
         <!-- main content -->
         <section class="bg">
-                <div class="featured-content">
-                    <h3>Some songs with little known titles</h3>
-                    <h5>learn and impress your friends</h5>
-                    <div class="div-line"></div>
-                    <div class="feature-content">
-                        <div class="feature-card">
-                            <h3>Discover Lyrics</h3>
-                            <div class="song-card-img">
-                                <img src="https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="feature-img" alt="">
-                            </div>
-                            <div class="song-card-info">
-                                <h4 class="song-card-info">Song Title - Album info <br>ft. blah blah</h4>
-                            </div>
-                        </div>
-                        <div class="feature-card">
-                            <h3>Discover Lyrics</h3>
-                            <div class="song-card-img">
-                                <img src="https://images.pexels.com/photos/374703/pexels-photo-374703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="feature-img" alt="">
-                            </div>
-                                <div class="song-card-info">
-                                    <h4 class="song-card-info">Song Title - Album info <br>ft. blah blah</h4>
-                                </div>
-                        </div>
-            
-                        <div class="feature-card">
-                            <h3>Discover Lyrics</h3>
-                            <div class="song-card-img">
-                                <img src="https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="feature-img" alt="">
-                            </div>
-                                <div class="song-card-info">
-                                    <h4 class="song-card-info">Song Title - Album info <br>ft. blah blah</h4>
-                                </div>
-                        </div>
-                    </div>
+
+            <div class="search-song">
+                <h3>Search Song Lyrics</h3>
+                <h5>learn and impress your friends</h5>
+                <div class="div-line"></div>
+                <div class="search-bar">
+                <form class="searchForm">
+                    <input placeholder="Song Title" class="searchInputTitle">
+                    <input placeholder="Artist" class="searchInputArtist">
+                </form>
+                    <button id="searchBtn" class="btn" type="submit">Search</button>
                 </div>
 
-
-                    <div class="search-song">
-                        <h3>Some songs with little known titles</h3>
-                        <h5>learn and impress your friends</h5>
-                        <div class="div-line"></div>
-                        <div class="search-bar">
-                        <input type="text" placeholder="type song title here">
+                <div class="card">
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-4 title" id="title">Song Title</p>
                         </div>
+                      </div>
+
+                      <div class="div-line"></div>
+                  
+                      <div class="content">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum recusandae delectus porro, sint illum consequuntur omnis, repellat accusantium nostrum eaque, reiciendis officia? Vel soluta est numquam, deserunt magni accusantium aspernatur!
+                        Fugit est assumenda reprehenderit unde rem libero fugiat, quis velit, cupiditate culpa delectus accusantium, ab iure facere tenetur illo sapiente earum distinctio modi quasi aut eaque. Nihil accusamus aspernatur tenetur!
+                        Animi ad odio repellendus eaque eum obcaecati dignissimos autem aut non, tempora iusto, quis aspernatur quo, quidem rem libero ex commodi perferendis vitae? Odio reprehenderit nam cumque corrupti animi modi.
+                        Inventore, corrupti perspiciatis laboriosam doloremque adipisci id aliquam libero aspernatur blanditiis, doloribus suscipit dolorum deserunt dolorem dignissimos. In consequuntur repellat, commodi ex veniam sit illo culpa eos quae nam fugiat?
+                        Eveniet, nulla ab consectetur maxime illum blanditiis doloribus beatae distinctio praesentium sunt asperiores non exercitationem accusantium fugiat eaque delectus. Culpa voluptatem facere, nihil ducimus sequi iste eius iure eligendi minus?
+                      </div>
                     </div>
+                  </div>
+
+
+            </div>
         </section>
         <script src="./assets/js/navbar.js"></script>
         <script src="./assets/js/lightmode.js"></script>

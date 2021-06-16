@@ -18,11 +18,42 @@
 
 body {
     background-color: var(--dark-bg);
-    height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card {
+    background-color: var(--accent);
+    border-radius: 15px;   
+}
+
+.title {
+    color: var(--primary-font);
+}
+
+.content {
+    color: var(--secondary-font);
+    display: grid;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.searchForm {
+    display: inline-flex;
+}
+
+.searchInputTitle {
+    border-radius: 50px 0px 0px 50px;
+}
+
+
+#searchBtn {
+    margin-left: 0px;
+    border-radius: 0px 50px 50px 0px;
+    padding: 17px;
+
 }
 
 .hide {
@@ -30,7 +61,6 @@ body {
 }
 
 .container {
-    background-image: url(../images/musepal-bg.svg);
     background-size: cover;
     padding: 20px;
     border-radius: 15px;
@@ -59,6 +89,7 @@ body {
 }
 
 h3 {
+    font-weight: bold;
     color: var(--primary-font);
     font-size: 25px;
 }
@@ -126,8 +157,6 @@ h3 {
     }
     
     body {
-        background-image: url(../images/musepal-bg-desktop.svg);
-        background-size: cover;
         background-color: var(--dark-bg);
         display: inline;
         height: 100vh;
@@ -172,10 +201,10 @@ h3 {
         background-color: var(--accent);
         border-radius: 15px;
         padding: 30px;
-        height: 170px;
+        height: 205px;
         width: 300px;
-        left: 50%;
-        top: 50%;
+        left: 2%;
+        top: 27%;
         transition: .5s;
     }
 
@@ -280,12 +309,6 @@ h3 {
         font-weight: bold;
     }
 
-    .featured-content h5 {
-        margin-top: 10px;
-        color: var(--secondary-font);
-        font-weight: normal;
-    }
-
     .div-line {
         border-bottom: 2px solid var(--primary-font);
         width: 87%;
@@ -327,12 +350,17 @@ h3 {
     }
 
     .search-song {
-        margin-top: 70px;
+        margin-top: ;
+    }
+
+    h5 {
+        color: #BEBEBE;
+        padding-top: 10px;
     }
 
     .search-song input {
-        border-radius: 50px;
         margin-top: 20px;
+        margin-bottom: 20px;
         padding: 15px;
         font-size: 18px;
         width: 50%;
@@ -362,7 +390,7 @@ h3 {
     .lightmode-sidebar {
         --dark-bg: #fff;
         --accent: #fff;
-        --green: #BCECC3;
+        --green: #FCCC75;
         --blue: #FCCC75;
         --pink: #FFA1A1;
     
@@ -397,15 +425,19 @@ h3 {
         align-items: center;
         margin-left: 35%;
     }
-
-    .muselight {
-        color: var(--blue);
-    }
 /* } */
 
 @media screen and (max-width: 1651px) {
     body {
         overflow-x: hidden;
+    }
+
+    .card {
+        margin: 0px 30px;
+    }
+
+    .search-song {
+        width: 100vw;
     }
 
     .mobile-nav {
@@ -430,8 +462,6 @@ h3 {
     
     .bg {
         justify-content: center;
-        align-items: center;
-        height: 960px;
     }
 
     .featured-content, .feature-content, .search-song {
@@ -470,37 +500,37 @@ h3 {
     }
 
     .sidebar {
-        height: 100%;
+        height: 100vh;
     }
 }
 
 @media screen and (max-width: 1329px) {
     .bg {
-        height: 100%;
+        height: 100vh;
     }
 
     .sidebar {
-        height: 100%;
+        height: 100vh;
     }
 }
 
 @media screen and (max-width: 1221px) {
     .bg {
-        height: 100%;
+        height: 100vh;
     }
 
     .sidebar {
-        height: 100%;
+        height: 100vh;
     }
 }
 
 @media screen and (max-width: 909px) {
     .bg {
-        height: 100%;
+        height: 100vh;
     }
 
     .sidebar {
-        height: 100%;
+        height: 100vh;
     }
 }
 
@@ -523,7 +553,7 @@ h3 {
         top: 0;
         transform: translatex(100%);
         transition: .5s ease-in;
-        height: 100%;
+        height: 100vh;
     }
 
     .nav-btn-container {
@@ -532,8 +562,7 @@ h3 {
     
     .bg {
         justify-content: center;
-        align-items: center;
-        height: 100%;
+        height: 100vh;
     }
 
     .featured-content, .feature-content, .search-song {
@@ -566,13 +595,23 @@ h3 {
     }
 }
 
+@media screen and (max-width: 519px) {
+    .searchForm {
+        width: 50%;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .bg {
-        height: 100%;
+        height: 100vh;
     }
 
     .sidebar {
-        height: 100%;
+        height: 100vh;
+    }
+
+    .searchForm {
+        width: 50%;
     }
 }
 

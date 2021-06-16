@@ -39,8 +39,6 @@ const lightModeButton = document.querySelector('#lightTheme')
 const enableLightMode = () => {
     meatballdark.classList.remove('hide')
     meatballlight.classList.add('hide')
-    muse.classList.add('muselight')
-    lightlogo.classList.remove('hide')
     darklogo.classList.add('hide')
     sidebar.classList.add('lightmode-sidebar')
     document.body.classList.add('lightmode')
@@ -50,7 +48,6 @@ const enableLightMode = () => {
 const disableLightMode = () => {
     meatballdark.classList.add('hide')
     meatballlight.classList.remove('hide')
-    muse.classList.remove('muselight')
     lightlogo.classList.add('hide')
     darklogo.classList.remove('hide')
     sidebar.classList.remove('lightmode-sidebar')
