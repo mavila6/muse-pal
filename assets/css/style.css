@@ -1,4 +1,3 @@
-/* CSS (root) psuedo class containing the repeating color theme to be called in stylesheet */
 :root {
     --dark-bg: #0D1117;
     --accent: #161B22;
@@ -10,30 +9,58 @@
     --primary-font: #fff;
     --secondary-font: #BEBEBE;
 }
-/* Universal selector setting font family as well as margin and padding for spacing */
+
 *{
     margin: 0;
     padding: 0;
     font-family: Poppins, sans-serif;
 }
-/* Assigns background color to body element as well as flex functionality, sizing, and centering content */
+
 body {
     background-color: var(--dark-bg);
-    height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.card {
+    background-color: var(--accent);
+    border-radius: 15px;   
+}
+
+.title {
+    color: var(--primary-font);
+}
+
+.content {
+    color: var(--secondary-font);
+    display: grid;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.searchForm {
+    display: inline-flex;
+}
+
+.searchInputTitle {
+    border-radius: 50px 0px 0px 50px;
+}
+
+
+#searchBtn {
+    margin-left: 0px;
+    border-radius: 0px 50px 50px 0px;
+    padding: 17px;
+
+}
 
 .hide {
     display: none;
 }
 
-
 .container {
-    background-image: url(../images/musepal-bg.svg);
     background-size: cover;
     padding: 20px;
     border-radius: 15px;
@@ -41,7 +68,7 @@ body {
     height: 100vw;
     max-width: 80%;
 }
-/* Centers content in section with 'logo' class and assigns font size/color */
+
 .logo {
     align-items: center;
     justify-content: center;
@@ -49,26 +76,24 @@ body {
     color: var(--primary-font);
     font-size: 30px;
 }
-/* Centers content in section with 'subtitle' class and assigns white font color */
+
 .subtitle {
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--primary-font);
-
 }
-/* Changes font color to span element with 'muse' class */
+
 .muse {
     color: var(--green);
 }
 
-
 h3 {
+    font-weight: bold;
     color: var(--primary-font);
     font-size: 25px;
 }
 
-/* Centers content in the section with 'option-container' class and adds font color, background color, spacing and rounded edges */
 .option-container {
     background-color: rgba(255, 255, 255, .5);
     border-radius: 15px;
@@ -80,7 +105,6 @@ h3 {
     padding: 20px;
     margin: 30px;
 }
-
 
 #slogan {
     margin: 20px 0px;
@@ -94,7 +118,6 @@ h3 {
     margin-bottom: 10px;
 }
 
-/* Assigns initial styles for the buttons in the option container including bg color, font properties, rounded edges and spacing */
 .btn {
     font-size: 16px;
     font-weight: bold;
@@ -107,14 +130,14 @@ h3 {
     color: var(--primary-font);
     background-color: var(--blue);
 }
-/* Psuedo class assigns different background color for button when cursor hovers over */
+
 .btn:hover {
     background-color: var(--pink);
     transition: .3s;
 }
-/* Psuedo class assigns different background color for button while clicked */
+
 .btn:active {
-    background-color: var(--green);
+    background-color: var(--blue);
     transition: 0s;
 }
 
@@ -134,8 +157,6 @@ h3 {
     }
     
     body {
-        background-image: url(../images/musepal-bg-desktop.svg);
-        background-size: cover;
         background-color: var(--dark-bg);
         display: inline;
         height: 100vh;
@@ -180,10 +201,10 @@ h3 {
         background-color: var(--accent);
         border-radius: 15px;
         padding: 30px;
-        height: 170px;
+        height: 205px;
         width: 300px;
-        left: 50%;
-        top: 50%;
+        left: 2%;
+        top: 27%;
         transition: .5s;
     }
 
@@ -288,12 +309,6 @@ h3 {
         font-weight: bold;
     }
 
-    .featured-content h5 {
-        margin-top: 10px;
-        color: var(--secondary-font);
-        font-weight: normal;
-    }
-
     .div-line {
         border-bottom: 2px solid var(--primary-font);
         width: 87%;
@@ -335,12 +350,17 @@ h3 {
     }
 
     .search-song {
-        margin-top: 70px;
+        margin-top: ;
+    }
+
+    h5 {
+        color: #BEBEBE;
+        padding-top: 10px;
     }
 
     .search-song input {
-        border-radius: 50px;
         margin-top: 20px;
+        margin-bottom: 20px;
         padding: 15px;
         font-size: 18px;
         width: 50%;
@@ -370,7 +390,7 @@ h3 {
     .lightmode-sidebar {
         --dark-bg: #fff;
         --accent: #fff;
-        --green: #BCECC3;
+        --green: #FCCC75;
         --blue: #FCCC75;
         --pink: #FFA1A1;
     
@@ -405,15 +425,19 @@ h3 {
         align-items: center;
         margin-left: 35%;
     }
-
-    .muselight {
-        color: var(--blue);
-    }
 /* } */
 
 @media screen and (max-width: 1651px) {
     body {
         overflow-x: hidden;
+    }
+
+    .card {
+        margin: 0px 30px;
+    }
+
+    .search-song {
+        width: 100vw;
     }
 
     .mobile-nav {
@@ -438,8 +462,6 @@ h3 {
     
     .bg {
         justify-content: center;
-        align-items: center;
-        height: 960px;
     }
 
     .featured-content, .feature-content, .search-song {
@@ -478,37 +500,37 @@ h3 {
     }
 
     .sidebar {
-        height: 100%;
+        height: 100vh;
     }
 }
 
 @media screen and (max-width: 1329px) {
     .bg {
-        height: 100%;
+        height: 100vh;
     }
 
     .sidebar {
-        height: 100%;
+        height: 100vh;
     }
 }
 
 @media screen and (max-width: 1221px) {
     .bg {
-        height: 100%;
+        height: 100vh;
     }
 
     .sidebar {
-        height: 100%;
+        height: 100vh;
     }
 }
 
 @media screen and (max-width: 909px) {
     .bg {
-        height: 100%;
+        height: 100vh;
     }
 
     .sidebar {
-        height: 100%;
+        height: 100vh;
     }
 }
 
@@ -531,7 +553,7 @@ h3 {
         top: 0;
         transform: translatex(100%);
         transition: .5s ease-in;
-        height: 100%;
+        height: 100vh;
     }
 
     .nav-btn-container {
@@ -540,8 +562,7 @@ h3 {
     
     .bg {
         justify-content: center;
-        align-items: center;
-        height: 100%;
+        height: 100vh;
     }
 
     .featured-content, .feature-content, .search-song {
@@ -574,13 +595,23 @@ h3 {
     }
 }
 
+@media screen and (max-width: 519px) {
+    .searchForm {
+        width: 50%;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .bg {
-        height: 100%;
+        height: 100vh;
     }
 
     .sidebar {
-        height: 100%;
+        height: 100vh;
+    }
+
+    .searchForm {
+        width: 50%;
     }
 }
 
