@@ -10,6 +10,7 @@ var searchInputArtist = $('.searchInputArtist').val();
 gifMe();
 searchForm.on('submit', searchLyrics);
 
+
 function searchLyrics(event) {
     event.preventDefault();
     var searchValue = searchInputTitle + " by: " + searchInputArtist
