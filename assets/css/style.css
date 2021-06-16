@@ -5,7 +5,6 @@
     --blue: #94ABF3;
     --pink: #FFA1A1;
     --yelow: #FCCC75;
-
     --primary-font: #fff;
     --secondary-font: #BEBEBE;
 }
@@ -21,9 +20,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--dark-bg);
+    display: inline;
+    height: 100vh;
+    width: 100vw;
 }
 
-.giphy-embed {
+
+h1 {
+    font-weight: bold;
+    font-size: 58px;
+}
+
+h3 {
+    font-weight: bold;
+    color: var(--primary-font);
+    font-size: 25px;
+}
+
+h5 {
+    color: #BEBEBE;
+    padding-top: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.gif-embed {
     border-radius: 15px;
     margin: 20px 0;
 }
@@ -90,22 +114,12 @@ body {
 }
 
 .muse {
-    color: var(--green);
+    color: var(--yelow);
 }
 
 .artist {
     font-size: medium;
-    color: #BEBEBE;
-}
-
-h3 {
-    font-weight: bold;
-    color: var(--primary-font);
-    font-size: 25px;
-}
-
-p {
-    font-size: 20px;
+    color: var(--secondary-font);
 }
 
 .option-container {
@@ -158,29 +172,13 @@ p {
 .overlay {
     top: 0;
     bottom: 0;
-    width: 100vw;
+    left: 0;
+    width: 100%;
     height: 100vh;
     z-index: 11;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
 }
-
-/* @media screen and (min-width: 2560px) { */
-    *{
-        font-family: Poppins, sans-serif;
-    }
-    
-    body {
-        background-color: var(--dark-bg);
-        display: inline;
-        height: 100vh;
-        width: 100vw;
-    }
-
-    h1 {
-        font-weight: bold;
-        font-size: 58px;
-    }
 
     /* meatball menu style ------------------------------------- */
     .meatball-container {
@@ -363,15 +361,6 @@ p {
         border-radius: 0px 0px 15px 15px;
     }
 
-    .search-song {
-        margin-top: ;
-    }
-
-    h5 {
-        color: #BEBEBE;
-        padding-top: 10px;
-    }
-
     .search-song input {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -424,7 +413,7 @@ p {
         --pink: #FFA1A1;
     
         --primary-font: #0D1117;
-        --secondary-font: #4b4b4b;
+        --secondary-font: #3b3b3b;
     }
     
     .lightmode-logo {
@@ -625,7 +614,8 @@ p {
     }
 
     .searchForm {
-        width: 50%;
+        width: 90%;
+        margin-left: 20px;
     }
 }
 
