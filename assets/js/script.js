@@ -1,3 +1,4 @@
+
 var searchInputTitle = $(".searchInputTitle").val();
 var searchInputArtist = $(".searchInputArtist").val();
 var apiKey = "api_key=bl5whSB0fw8HbwziUfOz6cNj3TYl8Wkx";
@@ -34,10 +35,12 @@ function gifMe() {
         return response.json();
     }) 
     .then(function (data) {
+
         console.log(data);
         img.attr('src', data.images.fixed_height.url);
     })
     .catch(function (error) {
         console.log(error);
     }) 
-}; 
+  }; 
+

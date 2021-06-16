@@ -1,46 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadata allowing for character set, compatibility, and screen responsiveness -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Links to the stylesheets and fonts used for the project -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- Title of the application displayed on the browser tab -->
-    <title>MusePal</title>
+    <title>musePal</title>
 </head>
-<!-- Body containing the content of the application -->
 <body>
-    <!-- Container to help format the main section of HTML -->
-    <main id="container" class="container">
-        <!-- Div containing the logo image and heading for the page -->
-        <div id="logo" class="logo">
-            <img src="./assets/images/musepal-logo.svg" alt="MusePal Logo">
-            <h1><span class="muse">Muse</span>Pal</h1>
+
+    <div class="mobile-nav hide">
+        <div id="darkmodelogo" class="logo">
+            <img src="./assets/images/musepal-logo.svg" alt="">
+            <h1><span class="muse">muse</span>Pal</h1>
         </div>
-        <!-- Div containing the subheading text -->
-        <div class="subtitle">
-                <h2>Your friend in the</br> music world</h2>
+        <div id="burger" class="burger">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
         </div>
-        <!-- Div containing the buttons that the user can interact with to open the modals -->
-        <div id="optionContainer" class="option-container">
-            <h3 id="">Pick your poison</h3>
-            <button id="discoverBtn" class="btn">discover something new</button>
-            <button id="searchBtn" class="btn">Search a Song</button>
-            <button id="randomBtn" class="btn">Random</button>
+    </div>
+        <!-- navbar -->
+        <div id="sidebar" class="sidebar">
+            <div id="darkmodelogo" class="logo">
+                <div id="desktoplogo" class="desktoplogo">
+                    <img src="./assets/images/musepal-logo.svg" alt="">
+                    <h1><span class="muse">muse</span>Pal</h1>
+                    <button id="meatball-container" class="meatball-container">
+                        <img src="./assets/images/meatball-menu.svg" id="meatball-btn-light" class="meatball" alt="">
+                        <img src="./assets/images/meatball-menu-dark.svg" id="meatball-btn-dark" class="meatball hide" alt="">
+                    </button>
+                </div>
+
+        <!-- meatball menu -->
+        <div class="menu-container">
+            <!-- meatball menu option -->
+
+            <!-- meatball modal -->
+            <div id="meatball-modal" class="meat-ball-modal hide">
+                <h3>Light Theme on/off</h3>
+                <button id="lightTheme" class="light-theme">
+                    <img src="./assets/images/lighttheme-ico.svg" alt="">
+                </button>
+            </div>
+              </div>
+
+        <!-- overlay that appears when modals are opened -->
+        <div id="overlay" class="overlay hide"></div>
+                
+                <div class="nav-line"></div>
+                <p class="nav-sub">Discover lyrics <br>anytime</p>
+            </div>
+
+            <div id="lightmodelogo" class="hide">
+                <img class="lightimage" src="./assets/images/musepal-logo-dark.svg" alt="">
+                <h1><span id="muse" class="muse">muse</span>Pal</h1>
+                <button id="meatball-container-light" class="meatball-container">
+                    <img src="./assets/images/meatball-menu.svg" id="meatball-btn-light" class="meatball" alt="">
+                    <img src="./assets/images/meatball-menu-dark.svg" id="meatball-btn-dark" class="meatball hide" alt="">
+                </button>
+                <div class="nav-line"></div>
+                <p class="nav-sub">Discover lyrics <br>anytime</p>
+            </div>
         </div>
-        <section class="lyrics-container">
+
+        <!-- main content -->
+        <section class="bg">
+
+            <div class="search-song">
+                <h3>Search Song Lyrics</h3>
+                <h5>learn and impress your friends</h5>
+                <div class="div-line"></div>
+                <div class="search-bar">
+                <form class="searchForm">
+                    <input placeholder="Song Title" class="searchInputTitle">
+                    <input placeholder="Artist" class="searchInputArtist">
+                </form>
+                    <button id="searchBtn" class="btn" type="submit">Search</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-4 title" id="title">Song Title</p>
+                        </div>
+                      </div>
+
+                      <div class="div-line"></div>
+                  
+                      <div class="content">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum recusandae delectus porro, sint illum consequuntur omnis, repellat accusantium nostrum eaque, reiciendis officia? Vel soluta est numquam, deserunt magni accusantium aspernatur!
+                        Fugit est assumenda reprehenderit unde rem libero fugiat, quis velit, cupiditate culpa delectus accusantium, ab iure facere tenetur illo sapiente earum distinctio modi quasi aut eaque. Nihil accusamus aspernatur tenetur!
+                        Animi ad odio repellendus eaque eum obcaecati dignissimos autem aut non, tempora iusto, quis aspernatur quo, quidem rem libero ex commodi perferendis vitae? Odio reprehenderit nam cumque corrupti animi modi.
+                        Inventore, corrupti perspiciatis laboriosam doloremque adipisci id aliquam libero aspernatur blanditiis, doloribus suscipit dolorum deserunt dolorem dignissimos. In consequuntur repellat, commodi ex veniam sit illo culpa eos quae nam fugiat?
+                        Eveniet, nulla ab consectetur maxime illum blanditiis doloribus beatae distinctio praesentium sunt asperiores non exercitationem accusantium fugiat eaque delectus. Culpa voluptatem facere, nihil ducimus sequi iste eius iure eligendi minus?
+                      </div>
+                    </div>
+                  </div>
+
+
+            </div>
         </section>
-    <!-- Closing tag for main section of page -->
-    </main>
-    <!-- Script tag to link the JS file at end of body element and apply jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-    <script src="./assets/js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+        <script src="./assets/js/navbar.js"></script>
+        <script src="./assets/js/lightmode.js"></script>
+        <script src="./assets/js/script.js"></script>
 </body>
-<!-- Closing HTML -->
+  <!-- Closing HTML -->
 </html>
+
