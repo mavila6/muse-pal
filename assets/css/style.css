@@ -5,7 +5,6 @@
     --blue: #94ABF3;
     --pink: #FFA1A1;
     --yelow: #FCCC75;
-
     --primary-font: #fff;
     --secondary-font: #BEBEBE;
 }
@@ -21,9 +20,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--dark-bg);
+    display: inline;
+    height: 100vh;
+    width: 100vw;
 }
 
-.giphy-embed {
+
+h1 {
+    font-weight: bold;
+    font-size: 58px;
+}
+
+h3 {
+    font-weight: bold;
+    color: var(--primary-font);
+    font-size: 25px;
+}
+
+h5 {
+    color: #BEBEBE;
+    padding-top: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.gif-embed {
     border-radius: 15px;
     margin: 20px 0;
 }
@@ -98,16 +122,6 @@ body {
     color: var(--secondary-font);
 }
 
-h3 {
-    font-weight: bold;
-    color: var(--primary-font);
-    font-size: 25px;
-}
-
-p {
-    font-size: 20px;
-}
-
 .option-container {
     background-color: rgba(255, 255, 255, .5);
     border-radius: 15px;
@@ -165,23 +179,6 @@ p {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
 }
-
-/* @media screen and (min-width: 2560px) { */
-    *{
-        font-family: Poppins, sans-serif;
-    }
-    
-    body {
-        background-color: var(--dark-bg);
-        display: inline;
-        height: 100vh;
-        width: 100vw;
-    }
-
-    h1 {
-        font-weight: bold;
-        font-size: 58px;
-    }
 
     /* meatball menu style ------------------------------------- */
     .meatball-container {
@@ -362,15 +359,6 @@ p {
         color: var(--primary-font);
         padding: 5px 0px 10px 10px;
         border-radius: 0px 0px 15px 15px;
-    }
-
-    .search-song {
-        margin-top: ;
-    }
-
-    h5 {
-        color: var(--secondary-font);
-        padding-top: 10px;
     }
 
     .search-song input {
