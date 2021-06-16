@@ -15,37 +15,132 @@
 </head>
 <!-- Body containing the content of the application -->
 <body>
-    <!-- Container to help format the main section of HTML -->
-    <main id="container" class="container">
-        <!-- Div containing the logo image and heading for the page -->
-        <div id="logo" class="logo">
-            <img src="./assets/images/musepal-logo.svg" alt="MusePal Logo">
-            <h1><span class="muse">Muse</span>Pal</h1>
+
+
+    <div class="mobile-nav hide">
+        <div id="darkmodelogo" class="logo">
+            <img src="./assets/images/musepal-logo.svg" alt="">
+            <h1><span class="muse">muse</span>Pal</h1>
         </div>
-        <!-- Div containing the subheading text -->
-        <div class="subtitle">
-                <h2>Your friend in the</br> music world</h2>
+        <div id="burger" class="burger">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
         </div>
-        <!-- Div containing the buttons that the user can interact with to open the modals -->
-        <div id="optionContainer" class="option-container">
+    </div>
+
+        <!-- navbar -->
+        <div id="sidebar" class="sidebar">
+            <div id="darkmodelogo" class="logo">
+                <div id="desktoplogo" class="desktoplogo">
+                    <img src="./assets/images/musepal-logo.svg" alt="">
+                    <h1><span class="muse">muse</span>Pal</h1>
+                    <button id="mobileNavBtn1" class="nav-btn hide">Discover Song Lyrics</button>
+                    <button id="mobileNavBtn2" class="nav-btn hide">Random Songs</button>
+                    <button id="mobileNavBtn3" class="nav-btn hide">Search for Songs</button>
+                </div>
+                <div class="nav-btn-container">
+                    <button class="nav-btn">Discover Song Lyrics</button>
+                    <button class="nav-btn">Random Songs</button>
+                    <button class="nav-btn">Search for Songs</button>
+                </div>
+
+        <!-- meatball menu -->
+        <div class="menu-container">
+            <!-- meatball menu option -->
+            <button id="meatball-container" class="meatball-container">
+                <img src="./assets/images/meatball-menu.svg" id="meatball-btn-light" class="meatball" alt="">
+                <img src="./assets/images/meatball-menu-dark.svg" id="meatball-btn-dark" class="meatball hide" alt="">
+            </button>
+
+            <!-- meatball modal -->
+            <div id="meatball-modal" class="meat-ball-modal hide">
+                <h3>Light Theme on/off</h3>
+                <button id="lightTheme" class="light-theme">
+                    <img src="./assets/images/lighttheme-ico.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+        <!-- overlay that appears when modals are opened -->
+        <div id="overlay" class="overlay hide"></div>
+                
+                <div class="nav-line"></div>
+                <p class="nav-sub">Discover lyrics <br>anytime</p>
+            </div>
+
+            <div id="lightmodelogo" class="hide">
+                <img class="lightimage" src="./assets/images/musepal-logo-dark.svg" alt="">
+                <h1><span id="muse" class="muse">muse</span>Pal</h1>
+                <div class="nav-btn-container">
+                    <button class="nav-btn">Discover Song Lyrics</button>
+                    <button class="nav-btn">Random Songs</button>
+                    <button class="nav-btn">Search for Songs</button>
+                </div>
+                
+                <div class="nav-line"></div>
+                <p class="nav-sub">Discover lyrics <br>anytime</p>
+            </div>
+        </div>
+
+        <!-- main content -->
+        <section class="bg">
+                <div class="featured-content">
+                    <h3>Some songs with little known titles</h3>
+                    <h5>learn and impress your friends</h5>
+                    <div class="div-line"></div>
+                    <div class="feature-content">
+                        <div class="feature-card">
+                            <h3>Discover Lyrics</h3>
+                            <div class="song-card-img">
+                                <img src="https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="feature-img" alt="">
+                            </div>
+                            <div class="song-card-info">
+                                <h4 class="song-card-info">Song Title - Album info <br>ft. blah blah</h4>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Discover Lyrics</h3>
+                            <div class="song-card-img">
+                                <img src="https://images.pexels.com/photos/374703/pexels-photo-374703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="feature-img" alt="">
+                            </div>
+                                <div class="song-card-info">
+                                    <h4 class="song-card-info">Song Title - Album info <br>ft. blah blah</h4>
+                                </div>
+                        </div>
+            
+                        <div class="feature-card">
+                            <h3>Discover Lyrics</h3>
+                            <div class="song-card-img">
+                                <img src="https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="feature-img" alt="">
+                            </div>
+                                <div class="song-card-info">
+                                    <h4 class="song-card-info">Song Title - Album info <br>ft. blah blah</h4>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <!-- Div containing the buttons that the user can interact with to open the modals -->
+        <div id="optionContainer" class="search-song">
             <h3 id="">Find Lyrics</h3>
             <form class="searchForm">
             <input placeholder="Song Title" class="searchInputTitle">
             <input placeholder="Artist" class="searchInputArtist">
+            <div class="div-line"></div>
             <button id="searchBtn" class="btn" type="submit">Search</button>
         </form>
         </div>
         <div class="lyrics-div">
 
         </div>
-    <!-- Closing tag for main section of page -->
-    </main>
-    <!-- Script tag to link the JS file at end of body element -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-    <!-- added giphy api-->
-    <!-- <script url="https://api.giphy.com/v1/gifs/search?api_key=bl5whSB0fw8HbwziUfOz6cNj3TYl8Wkx&limit=1&q="></script> -->
-    <script src="./assets/js/script.js"></script>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+        <script src="./assets/js/navbar.js"></script>
+        <script src="./assets/js/lightmode.js"></script>
+        <script src="./assets/js/script.js"></script>
 </body>
 <!-- Closing HTML -->
 </html>
