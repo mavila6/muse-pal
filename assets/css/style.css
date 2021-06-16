@@ -114,12 +114,12 @@ p {
 }
 
 .muse {
-    color: var(--green);
+    color: var(--yelow);
 }
 
 .artist {
     font-size: medium;
-    color: #BEBEBE;
+    color: var(--secondary-font);
 }
 
 .option-container {
@@ -172,7 +172,8 @@ p {
 .overlay {
     top: 0;
     bottom: 0;
-    width: 100vw;
+    left: 0;
+    width: 100%;
     height: 100vh;
     z-index: 11;
     position: absolute;
@@ -412,7 +413,7 @@ p {
         --pink: #FFA1A1;
     
         --primary-font: #0D1117;
-        --secondary-font: #4b4b4b;
+        --secondary-font: #3b3b3b;
     }
     
     .lightmode-logo {
@@ -613,7 +614,8 @@ p {
     }
 
     .searchForm {
-        width: 50%;
+        width: 90%;
+        margin-left: 20px;
     }
 }
 
