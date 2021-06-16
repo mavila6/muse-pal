@@ -1,15 +1,15 @@
-
 var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 var searchForm = $('.searchForm');
 var title = $('#title')
 var artist = $('.artist')
-var img = $('.gif-embed')
+var img = $('#gif-embed')
 var divEl = $('.content');
 var searchInputTitle = $('.searchInputTitle').val();
 var searchInputArtist = $('.searchInputArtist').val();
 
 gifMe();
-searchForm.on('submit', searchLyrics());
+searchForm.on('submit', searchLyrics);
+
 
 function searchLyrics(event) {
     event.preventDefault();
@@ -40,14 +40,14 @@ function gifMe() {
     }) 
     .then(function (data) {
         console.log(data);
-        img.setAttribute('src', data.images.url);
+        img.attr('src', data.data.images.fixed_height.url);
     })
     .catch(function (error) {
         console.log('error!');
         console.error(error);
     }) 
-  };  
-  
+};  
+
 function loopArray() {
   // put buttons on page
 }
@@ -57,4 +57,3 @@ var searchHistoryTitle = searchHistory[0].split(" by: ") [0];
 
 $(".searchInputTitle").val(searchHistoryTitle);
 $(".searchInputArtist").val(searchHistoryArtist);
-

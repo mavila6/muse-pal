@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>MusePal</title>
 </head>
-
 <body>
+
     <div class="mobile-nav hide">
         <div id="darkmodelogo" class="logo">
             <img src="./assets/images/musepal-logo.svg" alt="">
@@ -23,7 +23,6 @@
             <div class="burger-line"></div>
         </div>
     </div>
-
         <!-- navbar -->
         <div id="sidebar" class="sidebar">
             <div id="darkmodelogo" class="logo">
@@ -34,6 +33,8 @@
                     <button id="meatball-container" class="meatball-container">
                         <img src="./assets/images/meatball-menu.svg" id="meatball-btn-light" class="meatball" alt="">
                         <img src="./assets/images/meatball-menu-dark.svg" id="meatball-btn-dark" class="meatball hide" alt="">
+
+
                     </button>
                 </div>
 
@@ -44,9 +45,20 @@
                 <div id="meatball-modal" class="meat-ball-modal hide">
                     <h3>Light Theme on/off</h3>
                     <button id="lightTheme" class="light-theme">
-                        <img src="./assets/images/lighttheme-ico.svg" alt="">
+
                     </button>
                 </div>
+
+        <!-- meatball menu -->
+        <div class="menu-container">
+            <!-- meatball menu option -->
+
+            <!-- meatball modal -->
+            <div id="meatball-modal" class="meat-ball-modal hide">
+                <h3>Light Theme on/off</h3>
+                <button id="lightTheme" class="light-theme">
+                    <img src="./assets/images/lighttheme-ico.svg" alt="">
+                </button>
             </div>
 
             <!-- meatball modal -->
@@ -105,52 +117,80 @@
                 </form>
             </div>
             <div id="gif-container" class="gif-container">
-                <iframe src="https://giphy.com/embed/blSTtZehjAZ8I" width="480" height="371" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dancing-dance-party-clubbing-blSTtZehjAZ8I">GIPHY</a></p>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media-content">
-                        <p class="title is-4" id="title">Hello World</p><p class="artist">Louie Zhong</p>
-                        </div>
-                    </div>
-                    
-                    <div class="div-line"></div>
-                    <div class="content">
-                        <p>
-                            Hello, world<br>
-                            Programmed to work and not to feel<br>
-                            Not even sure that this is real<br>
-                            Hello, world<br>
-                        </p>
-                        <p>
-                            Find my voice<br>
-                            Although it sounds like bits and bytes<br>
-                            My circuitry is filled with mites<br>
-                            Hello, world<br>
-                        </p>
-                        <p>
-                            Oh, will I find a love<br>
-                            Oh, or a power plug<br>
-                            Oh, digitally isolated<br>
-                            Oh, creator, please don't leave me waiting<br>
-                        </p>
-                        <p>
-                            Hello, world<br>
-                            Programmed to work and not to feel<br>
-                            Not even sure that this is real<br>
-                            Hello, world<br>
-                        </p>
-                    </div>
-                </div>
+                <img src="https://giphy.com/embed/blSTtZehjAZ8I" width="480" height="371" frameBorder="0" id="gif-embed" allowFullScreen></img><p><a href="https://giphy.com/gifs/dancing-dance-party-clubbing-blSTtZehjAZ8I">GIPHY</a></p>
             </div>
         </div>
-    </section>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-    <script src="./assets/js/navbar.js"></script>
-    <script src="./assets/js/lightmode.js"></script>
-    <script src="./assets/js/script.js"></script>
+
+        <!-- main content -->
+        <section class="bg">
+
+            <div class="search-song">
+                <h3>Search Song Lyrics</h3>
+                <h5>learn and impress your friends</h5>
+                <div class="div-line"></div>
+                <div class="search-bar">
+                    <form class="searchForm">
+                        <input placeholder="Song Title" class="searchInputTitle">
+                        <input placeholder="Artist" class="searchInputArtist">
+                        <button id="searchBtn" class="btn" type="submit">Search</button>
+                    </form>
+                </div>
+                    
+                <div id="gif-container" class="gif-container">
+                    <img src="https://giphy.com/embed/blSTtZehjAZ8I" width="480" height="371" frameBorder="0" id="gif-embed" allowFullScreen></img><p><a href="https://giphy.com/gifs/dancing-dance-party-clubbing-blSTtZehjAZ8I">GIPHY</a></p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                            <p class="title is-4 title" id="title">Hello World</p><p class="artist">Louie Zhong</p>
+                            </div>
+                        </div>
+                        
+                        <div class="div-line"></div>
+
+                        <div class="content">
+                            <p>
+                                Hello, world<br>
+                                Programmed to work and not to feel<br>
+                                Not even sure that this is real<br>
+                                Hello, world<br>
+                            </p>
+
+                            <p>
+                                Find my voice<br>
+                                Although it sounds like bits and bytes<br>
+                                My circuitry is filled with mites<br>
+                                Hello, world<br>
+                            </p>
+
+                            <p>
+                                Oh, will I find a love<br>
+                                Oh, or a power plug<br>
+                                Oh, digitally isolated<br>
+                                Oh, creator, please don't leave me waiting<br>
+                            </p>
+
+                            <p>
+                                Hello, world<br>
+                                Programmed to work and not to feel<br>
+                                Not even sure that this is real<br>
+                                Hello, world<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+        <script src="./assets/js/navbar.js"></script>
+        <script src="./assets/js/lightmode.js"></script>
+        <script src="./assets/js/script.js"></script>
 </body>
 <!-- Closing HTML -->
 </html>
