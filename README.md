@@ -57,4 +57,4 @@ https://mavila6.github.io/muse-pal/
 
 David Lopez - Samantha Malone - Marco Avila
 
-&copy 2021 Quatro
+&copy; 2021 Quatro
