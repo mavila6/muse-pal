@@ -8,7 +8,7 @@ MusePal is a modern music app that lets you search a song and returns the lyrics
 
 ### Built With
 
-* Programming Languages
+#### Programming Languages
 
 <p>
 <a href=""><img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/></a>
@@ -16,25 +16,25 @@ MusePal is a modern music app that lets you search a song and returns the lyrics
 <a href=""><img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
 </p>
 
-* Frameworks and Libraries
+#### Frameworks and Libraries
 
 <p>
 <a href=""><img alt="jQuery" src="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white"/>
 </p>
 
-* Design
+#### Design
 
 <p>
 <a href=""><img alt="Figma" src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"/>
 </p>
 
-* IDEs/Editors
+#### IDEs/Editors
 
 <p>
 <a href=""><img alt="Visual Studio Code" src="https://img.shields.io/badge/VisualStudioCode-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
 </p>
 
-* Version Control
+#### Version Control
 
 <p>
 <a href=""><img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/>

@@ -1,115 +1,46 @@
-// variables
+
+var searchInputTitle = $(".searchInputTitle").val();
+var searchInputArtist = $(".searchInputArtist").val();
+var apiKey = "api_key=bl5whSB0fw8HbwziUfOz6cNj3TYl8Wkx";
 var searchForm = $(".searchForm");
-var apiKey = "bl5whSB0fw8HbwziUfOz6cNj3TYl8Wkx";
-searchForm.submit (searchLyrics);
-
-// add local storage
-
-function searchLyrics(event) {
+var title = $('.name')
+var img = $('.img')
+var divEl = $('.content');
+gifMe();
+searchForm.on('submit', searchLyrics);
+//Created an asynchronous function to fetch lyrics API and convert data to text//
+async function searchLyrics(event) {
     event.preventDefault();
-    var searchInputTitle = $(".searchInputTitle").val();
-    var searchInputArtist = $(".searchInputArtist").val();
-    var lyricsDiv = document.querySelector (".lyrics-div");
-    // error with loading site 504
-    gifMe();
-    fetch(`https://api.lyrics.ovh/v1/${searchInputArtist}/${searchInputTitle}`)
-    .then(function (response) {
-        return response.json();
-    }) 
-    .then(function (data) {
-        // where to display data 
-        // remove gif display
-        $(".content").append(`
-        <div class="card">
-          <div class="content">
-          ${data.lyrics}Hello
-          </div>
-        </div>
-        `)
-    });
-  };
-// Create a function called `searchLyrics()`
-// var searchForm = $(".searchForm");
-var apiKey = "bl5whSB0fw8HbwziUfOz6cNj3TYl8Wkx";
+    // Const variables to contain the fetch function, the text conversion of the data, and the data split//
+    const response = await fetch('https://api.lyrics.ovh/v1/'+searchInputArtist+'/'+searchInputTitle);
+    const data = await response.json();
+    // let variables containing the logic to manipulate DOM to creat new HTML elements//
+    //Section appending the newly created elements to the HTML and the fetched data to the elements//
+    console.log(data);
+    divEl.append(data.lyrics);
+    title.append(searchInputArtist, searchInputTitle);
+};
 
-function gifMe(event) {
-    // event.preventDefault();
-    fetch('https://api.giphy.com/v1/gifs/random?api_key=bl5whSB0fw8HbwziUfOz6cNj3TYl8Wkx&rating=PG-13&tag=music')
+//called lyrics() function and used .catch to log any errors that may occur in the console//
+searchLyrics()
+    .catch(error =>{
+        console.log('error!');
+        console.error(error);
+    });
+
+
+function gifMe() {
+    fetch('https://api.giphy.com/v1/gifs/random?'+apiKey+'&rating=PG-13&tag=music')
     .then(function (response) {
         return response.json();
     }) 
     .then(function (data) {
-        // where to display data 
-      console.log(data);  
+
+        console.log(data);
+        img.attr('src', data.images.fixed_height.url);
     })
     .catch(function (error) {
         console.log(error);
     }) 
   }; 
- 
-  
-  // function waitingGif(event) {
-  //   event.preventDefault();
-  //   var str = document.querySelector ("lyrics.div");
-  //   fetch
-  // }
 
-  // document.addEventListener("DOMContentLoaded", init);
-  // function init () {
-  //   // error message here HELP!
-  //   // document.getElementById("btnSearch").addEventListener("click", ev => {
-  //     $("#searchBtn").on("submit", ev => {
-  //       // to stop page reload
-  //     ev.preventDefault();
-  //     var str = document.getElementById("search").nodeValue.trim();
-  //     url = url.concat(str);
-  //     console.log(url);
-  //     fetch(url)
-  //       .then(response => response.json())
-  //       .then(content => {
-  //         // data, pagination, meta
-  //         console.log(content.data);
-  //         console.log("META", content.meta);
-  //         var fig = document.createElement("figure");
-  //         var img = document.createElement("img");
-  //         var fc = document.createElement("figcaption");
-  //         img.src = content.data[0].images.downsized.url;
-  //         img.alt = content.data[0].title;
-  //         fc.textContent = content.data[0].title;
-  //         fig.appendChild(img);
-  //         fig.appendChild(fc);
-  //         var out = document.querySelector("out");
-  //       });
-  //     })
-  //   };
-// example from class work
-// function gifMe() {
-//   // Create a variable called `searchTerm` that will use `document.querySelector()` to target the `id` of the input
-//   // Use `.value` to capture the value of the input and store it in the variable
-//   // var searchForm = document.querySelector('#searchTerm').value;
-
-//   // Make a `fetch` request concatenating the `searchTerm` to the query URL
-//   // Remember to add your API key at the end
-//   fetch(
-//     'https://api.giphy.com/v1/gifs/search?q=' +
-//       searchForm +
-//       '&api_key=bl5whSB0fw8HbwziUfOz6cNj3TYl8Wkx'
-//   )
-//     .then(function(response) {
-//       return response.json();
-//     })
-//     .then(function(response) {
-//       console.log(response.data[0]);
-//       // Create a variable that will select the <div> where the GIF will be displayed
-//       var responseContainerEl = document.querySelector('#response-container');
-
-//       // Empty out the <div> before we append a GIF to it
-//       responseContainerEl.innerHTML = '';
-
-//       var gifImg = document.createElement('img');
-//       gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
-
-//       // Append 'gifImg' to the <div>
-//       responseContainerEl.appendChild(gifImg);
-//     });
-// };   
