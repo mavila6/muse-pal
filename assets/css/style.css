@@ -106,7 +106,10 @@ h3 {
 
 p {
     font-size: 20px;
+}
 
+.gif {
+    background-color: #0D1117;
 }
 
 .option-container {
