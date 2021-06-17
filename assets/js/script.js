@@ -1,21 +1,22 @@
 var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 var searchForm = $('.searchForm');
-var title = $('#title')
-var artist = $('.artist')
-var img = $('#gif-embed')
+var title = $('#title');
+var artist = $('.artist');
+var img = $('#gif-embed');
 var divEl = $('.content');
-var searchInputTitle = $('.searchInputTitle').val();
-var searchInputArtist = $('.searchInputArtist').val();
 
 gifMe();
-searchForm.on('submit', searchLyrics);
-
-
-function searchLyrics(event) {
+searchForm.on('submit', function(event) {
     event.preventDefault();
+    var searchInputTitle = $('.searchInputTitle').val();
+    var searchInputArtist = $('.searchInputArtist').val();
     var searchValue = searchInputTitle + " by: " + searchInputArtist
     searchHistory.unshift(searchValue);
     localStorage.setItem("search", JSON.stringify(searchHistory));
+    searchLyrics(searchInputTitle, searchInputArtist);
+});
+
+function searchLyrics(title, artist) {
     fetch(`https://api.lyrics.ovh/v1/${searchInputArtist}/${searchInputTitle}`)
     .then(function (response) {
         return response.json();
