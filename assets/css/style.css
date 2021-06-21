@@ -23,6 +23,33 @@ body {
     align-items: center;
 }
 
+body {
+    background-color: var(--dark-bg);
+    display: inline;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 58px;
+}
+
+h3 {
+    font-weight: bold;
+    color: var(--primary-font);
+    font-size: 25px;
+}
+
+h5 {
+    color: var(--secondary-font);
+    padding-top: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
 .giphy-embed {
     border-radius: 15px;
     margin: 20px 0;
@@ -98,16 +125,6 @@ body {
     color: var(--secondary-font);
 }
 
-h3 {
-    font-weight: bold;
-    color: var(--primary-font);
-    font-size: 25px;
-}
-
-p {
-    font-size: 20px;
-}
-
 .gif {
     background-color: #0D1117;
 }
@@ -170,471 +187,449 @@ p {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* @media screen and (min-width: 2560px) { */
-    *{
-        font-family: Poppins, sans-serif;
-    }
+/* meatball menu style ------------------------------------- */
+.meatball-container {
+    background-color: var(--yelow);
+    border-radius: 50px;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.meatball-container:hover {
+    background-color: var(--blue);
+    transition: .5s;
+}
+
+.meatball-container:active {
+    background-color: var(--pink);
+    transition: 0s;
+}
+
+.meatball {
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+}
+
+/* meatball modal style */
+.meat-ball-modal {
+    position: absolute;
+    z-index: 12;
+    background-color: var(--accent);
+    border-radius: 15px;
+    padding: 30px;
+    height: 205px;
+    width: 300px;
+    left: 2%;
+    top: 27%;
+    transition: .5s;
+}
+
+.dark-theme {
+    height: 50px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: var(--blue);
+    border: none;
+    outline: none;
+    margin: 20px 0 20px 0;
+    transition: .5s;
+}
+
+.light-theme {
+    height: 50px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: var(--pink);
+    border: none;
+    outline: none;
+    margin: 20px 0 20px 0;
+    transition: .5s;
+}
+
+.light-theme:hover, .dark-theme:hover {
+    background-color: var(--green);
+    transition: .5s;
+}
+
+.dark-theme:active {
+    background-color: var(--blue);
+    transition: 0s;
+}
+
+.light-theme:active {
+    background-color: var(--pink);
+    transition: 0s;
+}
+
+/* meatball menu style end ------------------------------------- */
+
+.sidebar {
+    background-color: var(--accent);
+    height: 100vh;
+    z-index: 10;
+    float: left;
+    padding: 30px;
+    display: flex;
+}
+
+.nav-btn {
+    border-radius: 50px;
+    background-color: var(--blue);
+    border: none;
+    outline: none;
+    color: var(--primary-font);
+    padding: 15px;
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 22px;
+    transition: .3s;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-btn:hover {
+    background-color: var(--pink);
+    transition: .3s;
+}
+
+.nav-line {
+    border-bottom: 2px solid var(--primary-font);
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nav-sub {
+    text-align: left;
+    font-size: 20px;
+}
+
+.bg {
+    display: grid;
+    background-color: var(--dark-bg);
+    padding: 30px;
+    height: 100vh;
+}
+
+.feature-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.featured-content h3 {
+    color: var(--primary-font);
+    font-weight: bold;
+}
+
+.div-line {
+    border-bottom: 2px solid var(--primary-font);
+    width: 87%;
+    margin: auto;
+    margin: 20px 0px 20px 0px;
+}
+
+.feature-card {
+    margin: 0px 20px 0px 0px;
+    width: 400px;
+}
+
+.feature-card h3 {
+    color: var(--primary-font);
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    margin: 15px;
+}
+
+.song-card-img {
+    background-size: cover;
+    background-color: var(--accent);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.feature-img {
+    border-radius: 15px 15px 0 0;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.song-card-info {
+    background-color: var(--accent);
+    color: var(--primary-font);
+    padding: 5px 0px 10px 10px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.search-song input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 18px;
+    width: 50%;
+    outline: none;
+    border: none;
+}
+
+.hide {
+    display: none;
+}
+
+#gif-embed{
+    background-color: #0D1117;
+}
+::-webkit-scrollbar {
+    background-color: var(--dark-bg);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--green);
+}
+
+/* light mode style */
+.lightmode-sidebar {
+    --dark-bg: #fff;
+    --accent: #fff;
+    --green: #FCCC75;
+    --blue: #FCCC75;
+    --pink: #FFA1A1;
+
+    --primary-font: #0D1117;
+    --secondary-font: #4b4b4b;
     
-    body {
-        background-color: var(--dark-bg);
-        display: inline;
-        height: 100vh;
-        width: 100vw;
-    }
+    height: 100vh;
+    z-index: 10;
+    padding: 30px;
+}
 
-    h1 {
-        font-weight: bold;
-        font-size: 58px;
-    }
+.lightmode {
+    --dark-bg: #e9e9e9;
+    --accent: #fff;
+    --green: #BCECC3;
+    --blue: #FCCC75;
+    --pink: #FFA1A1;
 
-    /* meatball menu style ------------------------------------- */
-    .meatball-container {
-        background-color: var(--yelow);
-        border-radius: 50px;
-        height: 50px;
-        width: 100%;
-        outline: none;
-        border: none;
-    }
+    --primary-font: #0D1117;
+    --secondary-font: #3b3b3b;
+}
 
-    .meatball-container:hover {
-        background-color: var(--blue);
-        transition: .5s;
-    }
+.lightmode-logo {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
 
-    .meatball-container:active {
-        background-color: var(--pink);
-        transition: 0s;
-    }
-
-    .meatball {
-        padding: 10px;
-        width: 100px;
-        height: 50px;
-    }
-
-    /* meatball modal style */
-    .meat-ball-modal {
-        position: absolute;
-        z-index: 12;
-        background-color: var(--accent);
-        border-radius: 15px;
-        padding: 30px;
-        height: 205px;
-        width: 300px;
-        left: 2%;
-        top: 27%;
-        transition: .5s;
-    }
-
-    .dark-theme {
-        height: 50px;
-        width: 100%;
-        border-radius: 15px;
-        background-color: var(--blue);
-        border: none;
-        outline: none;
-        margin: 20px 0 20px 0;
-        transition: .5s;
-    }
-
-    .light-theme {
-        height: 50px;
-        width: 100%;
-        border-radius: 15px;
-        background-color: var(--pink);
-        border: none;
-        outline: none;
-        margin: 20px 0 20px 0;
-        transition: .5s;
-    }
-    
-    .light-theme:hover, .dark-theme:hover {
-        background-color: var(--green);
-        transition: .5s;
-    }
-
-    .dark-theme:active {
-        background-color: var(--blue);
-        transition: 0s;
-    }
-
-    .light-theme:active {
-        background-color: var(--pink);
-        transition: 0s;
-    }
-
-    /* meatball menu style end ------------------------------------- */
-
-    .sidebar {
-        background-color: var(--accent);
-        height: 100vh;
-        z-index: 10;
-        float: left;
-        padding: 30px;
-        display: flex;
-    }
-
-    .nav-btn {
-        border-radius: 50px;
-        background-color: var(--blue);
-        border: none;
-        outline: none;
-        color: var(--primary-font);
-        padding: 15px;
-        display: flex;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        font-weight: bold;
-        font-size: 22px;
-        transition: .3s;
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .nav-btn:hover {
-        background-color: var(--pink);
-        transition: .3s;
-    }
-
-    .nav-line {
-        border-bottom: 2px solid var(--primary-font);
-        width: 100%;
-        margin: auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .nav-sub {
-        text-align: left;
-        font-size: 20px;
-    }
-
-    .bg {
-        display: grid;
-        background-color: var(--dark-bg);
-        padding: 30px;
-        height: 100vh;
-    }
-
-    .feature-content {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .featured-content h3 {
-        color: var(--primary-font);
-        font-weight: bold;
-    }
-
-    .div-line {
-        border-bottom: 2px solid var(--primary-font);
-        width: 87%;
-        margin: auto;
-        margin: 20px 0px 20px 0px;
-    }
-
-    .feature-card {
-        margin: 0px 20px 0px 0px;
-        width: 400px;
-    }
-
-    .feature-card h3 {
-        color: var(--primary-font);
-        font-weight: bold;
-        justify-content: center;
-        text-align: center;
-        margin: 15px;
-    }
-
-    .song-card-img {
-        background-size: cover;
-        background-color: var(--accent);
-        border-radius: 15px 15px 0px 0px;
-    }
-
-    .feature-img {
-        border-radius: 15px 15px 0 0;
-        height: 200px;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .song-card-info {
-        background-color: var(--accent);
-        color: var(--primary-font);
-        padding: 5px 0px 10px 10px;
-        border-radius: 0px 0px 15px 15px;
-    }
-
-    h5 {
-        color: var(--secondary-font);
-        padding-top: 10px;
-    }
-
-    .search-song input {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 15px;
-        font-size: 18px;
-        width: 50%;
-        outline: none;
-        border: none;
-    }
-
-    .hide {
-        display: none;
-    }
-
-    #gif-embed{
-        background-color: #0D1117;
-    }
-    ::-webkit-scrollbar {
-        background-color: var(--dark-bg);
-        width: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: var(--accent);
-        border-radius: 15px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background-color: var(--green);
-    }
-
-    /* light mode style */
-    .lightmode-sidebar {
-        --dark-bg: #fff;
-        --accent: #fff;
-        --green: #FCCC75;
-        --blue: #FCCC75;
-        --pink: #FFA1A1;
-    
-        --primary-font: #0D1117;
-        --secondary-font: #4b4b4b;
-        
-        height: 100vh;
-        z-index: 10;
-        padding: 30px;
-    }
-
-    .lightmode {
-        --dark-bg: #e9e9e9;
-        --accent: #fff;
-        --green: #BCECC3;
-        --blue: #FCCC75;
-        --pink: #FFA1A1;
-    
-        --primary-font: #0D1117;
-        --secondary-font: #3b3b3b;
-    }
-    
-    .lightmode-logo {
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .lightimage {
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        margin-left: 35%;
-    }
-/* } */
+.lightimage {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 35%;
+}
+/* Media Queries begin*/
 
 @media screen and (max-width: 1651px) {
-    body {
-        overflow-x: hidden;
-    }
+body {
+    overflow-x: hidden;
+}
 
-    .card {
-        margin: 0px 30px;
-    }
+.card {
+    margin: 0px 30px;
+}
 
-    .search-song {
-        width: 100vw;
-    }
+.search-song {
+    width: 100vw;
+}
 
-    .mobile-nav {
-        display: block;
-    }
+.mobile-nav {
+    display: block;
+}
 
-    .logo {
-        padding-top: 30px;
-    }
+.logo {
+    padding-top: 30px;
+}
 
-    .sidebar {
-        position: absolute;
-        right: 0;
-        top: 0;
-        transform: translatex(100%);
-        transition: .5s ease-in;
-    }
+.sidebar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translatex(100%);
+    transition: .5s ease-in;
+}
 
-    .nav-btn-container {
-        opacity: 0;
-    }
-    
-    .bg {
-        justify-content: center;
-    }
+.nav-btn-container {
+    opacity: 0;
+}
 
-    .featured-content, .feature-content, .search-song {
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
+.bg {
+    justify-content: center;
+}
 
-    .div-line {
-        width: 100%;
-    }
+.featured-content, .feature-content, .search-song {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
-    .mobile-nav {
-        background-color: var(--dark-bg);
-        width: 100%;
-    }
+.div-line {
+    width: 100%;
+}
 
-    .burger {
-        background-color: var(--dark-bg);
-        padding: 30px;
-        cursor: pointer;
-        display: grid;
-        justify-content: center;
-    }
-    .burger-line{
-        background-color: white;
-        width: 30px;
-        height: 5px;
-        margin: 3px;
-    }
+.mobile-nav {
+    background-color: var(--dark-bg);
+    width: 100%;
+}
+
+.burger {
+    background-color: var(--dark-bg);
+    padding: 30px;
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+}
+.burger-line{
+    background-color: white;
+    width: 30px;
+    height: 5px;
+    margin: 3px;
+}
 }
 
 @media screen and (max-width: 1651px) {
-    .bg {
-        height: 100vh;
-    }
+.bg {
+    height: 100vh;
+}
 
-    .sidebar {
-        height: 100vh;
-    }
+.sidebar {
+    height: 100vh;
+}
 }
 
 @media screen and (max-width: 1329px) {
-    .bg {
-        height: 100vh;
-    }
+.bg {
+    height: 100vh;
+}
 
-    .sidebar {
-        height: 100vh;
-    }
+.sidebar {
+    height: 100vh;
+}
 }
 
 @media screen and (max-width: 1221px) {
-    .bg {
-        height: 100vh;
-    }
+.bg {
+    height: 100vh;
+}
 
-    .sidebar {
-        height: 100vh;
-    }
+.sidebar {
+    height: 100vh;
+}
 }
 
 @media screen and (max-width: 909px) {
-    .bg {
-        height: 100vh;
-    }
+.bg {
+    height: 100vh;
+}
 
-    .sidebar {
-        height: 100vh;
-    }
+.sidebar {
+    height: 100vh;
+}
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
+body {
+    overflow-x: hidden;
+}
 
-    .mobile-nav {
-        display: block;
-    }
+.mobile-nav {
+    display: block;
+}
 
-    .logo {
-        padding-top: 30px;
-    }
+.logo {
+    padding-top: 30px;
+}
 
-    .sidebar {
-        position: absolute;
-        right: 0;
-        top: 0;
-        transform: translatex(100%);
-        transition: .5s ease-in;
-        height: 100vh;
-    }
+.sidebar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translatex(100%);
+    transition: .5s ease-in;
+    height: 100vh;
+}
 
-    .nav-btn-container {
-        opacity: 0;
-    }
-    
-    .bg {
-        justify-content: center;
-        height: 100vh;
-    }
+.nav-btn-container {
+    opacity: 0;
+}
 
-    .featured-content, .feature-content, .search-song {
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
+.bg {
+    justify-content: center;
+    height: 100vh;
+}
 
-    .div-line {
-        width: 100%;
-    }
+.featured-content, .feature-content, .search-song {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
-    .mobile-nav {
-        background-color: var(--dark-bg);
-        width: 100%;
-    }
+.div-line {
+    width: 100%;
+}
 
-    .burger {
-        background-color: var(--dark-bg);
-        padding: 30px;
-        cursor: pointer;
-        display: grid;
-        justify-content: center;
-    }
-    .burger-line{
-        background-color: white;
-        width: 30px;
-        height: 5px;
-        margin: 3px;
-    }
+.mobile-nav {
+    background-color: var(--dark-bg);
+    width: 100%;
+}
+
+.burger {
+    background-color: var(--dark-bg);
+    padding: 30px;
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+}
+.burger-line{
+    background-color: white;
+    width: 30px;
+    height: 5px;
+    margin: 3px;
+}
 }
 
 @media screen and (max-width: 519px) {
-    .searchForm {
-        width: 50%;
-    }
+.searchForm {
+    width: 50%;
+}
 }
 
 @media screen and (max-width: 500px) {
-    .bg {
-        height: 100vh;
-    }
+.bg {
+    height: 100vh;
+}
 
-    .sidebar {
-        height: 100vh;
-    }
+.sidebar {
+    height: 100vh;
+}
 
-    .searchForm {
-        width: 90%;
-        margin-left: 20px;
-    }
+.searchForm {
+    width: 90%;
+    margin-left: 20px;
+}
 }
 
 .sidebar-active {
-    transform: translatex(0%);
-    position: absolute;
+transform: translatex(0%);
+position: absolute;
 }
