@@ -60,9 +60,9 @@ AS A music and Giphy lover. I WANT an app that will allow me to search lyrics an
   
 ### Credits
 
-Giphy API: https://developers.giphy.com/
+*Giphy API : https://developers.giphy.com/
   
-Lyrics API: https://lyricsovh.docs.apiary.io/
+*Lyrics API : https://lyricsovh.docs.apiary.io/
   
 ## Contribution
 
