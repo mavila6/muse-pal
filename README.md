@@ -57,7 +57,13 @@ AS A music and Giphy lover. I WANT an app that will allow me to search lyrics an
 ![Mobile Dark](assets/images/musepal-mobile-d.png)
 
 ![Mobile Light](assets/images/musepal-mobile-l.png)
+  
+### Credits
 
+Giphy API: https://developers.giphy.com/
+  
+Lyrics API: https://lyricsovh.docs.apiary.io/
+  
 ## Contribution
 
 David Lopez - Samantha Malone - Marco Avila
