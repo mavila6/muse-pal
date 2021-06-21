@@ -50,13 +50,13 @@ AS A music and Giphy lover. I WANT an app that will allow me to search lyrics an
 
 ### Screenshots
 
-![alt text](assets/images/muse-shot-1.png)
+![Desktop Dark](assets/images/musepal-desk-d.png)
 
-![alt text](assets/images/muse-shot-2.png)
+![Desktop Light](assets/images/musepal-desk-l.png)
 
-![alt text](assets/images/muse-shot-3.png)
+![Mobile Dark](assets/images/musepal-mobile-d.png)
 
-
+![Mobile Light](assets/images/musepal-mobile-l.png)
 
 ## Contribution
 
